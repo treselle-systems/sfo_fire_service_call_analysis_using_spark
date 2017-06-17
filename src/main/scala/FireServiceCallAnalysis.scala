@@ -44,7 +44,7 @@ object FireServiceCallAnalysis {
 	// UNCOMMENT THIS AND COMMEND THE NEXT REPARTITION LINE WHEN TRYING WITH USE CASE 1
     //filteredFireServiceCallRDD.setName("FireServiceCallsRDD").persist().take(10)
 	
-	filteredFireServiceCallRDD.setName("FireServiceCallsRDD").coalesce(args(1).toInt).persist().take(10)
+	filteredFireServiceCallRDD.setName("FireServiceCallsRDD").persist().take(10)
 
     // NUMBER OF RECORDS IN THE FILE
     val totalRecords = filteredFireServiceCallRDD.count()
